@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Labo03Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <envs>
+      <env name="USER" value="postgres" />
+      <env name="PASSWORD" value="2401" />
+      <env name="BD" value="jdbc:postgresql://localhost:5432/Specimen" />
+    </envs>
+    <module name="Labo03" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.labo03.Labo03Application" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
