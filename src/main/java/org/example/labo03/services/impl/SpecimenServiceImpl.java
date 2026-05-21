@@ -42,7 +42,7 @@ public class SpecimenServiceImpl implements SpecimenService {
         Page<Specimen> specimenPage = specimenRepository.findAll(pageable);
 
         if (specimenPage.isEmpty()) {
-            throw new ResourceNotFoundException("No specimens are registered in Hyrule");
+            throw new ResourceNotFoundException("No hay specimen registrado");
         }
 
         return specimenMapper.toPageableResponse(specimenPage);
@@ -51,7 +51,7 @@ public class SpecimenServiceImpl implements SpecimenService {
     @Override
     public SpecimenResponse getSpecimenById(UUID id) {
         return specimenMapper.toDto(specimenRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Specimen not found in Hyrule Records"))
+                .orElseThrow(() -> new ResourceNotFoundException("Specimen no encontrado"))
         );
     }
 

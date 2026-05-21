@@ -37,7 +37,7 @@ public class SpecimenController {
     @PostMapping("/create")
     public ResponseEntity<GeneralResponse> createSpecimen(@RequestBody @Valid CreateSpecimenRequest request) {
         return buildResponse(
-                "Specimen registered in the Sheikah Slate successfully",
+                "Specimen se ha creado con exito",
                 HttpStatus.CREATED,
                 specimenService.createSpecimen(request)
         );
@@ -51,7 +51,7 @@ public class SpecimenController {
             @RequestParam(defaultValue = "ASC") String sortOrder
     ) {
         return buildResponse(
-                "Hyrule Records retrieved successfully",
+                "Se han obtenido correctamente",
                 HttpStatus.OK,
                 specimenService.getAllSpecimens(page, size, sortBy, sortOrder)
         );
@@ -60,7 +60,7 @@ public class SpecimenController {
     @GetMapping("/getBy/{id}")
     public ResponseEntity<GeneralResponse> getSpecimenById(@PathVariable UUID id) {
         return buildResponse(
-                "Specimen located",
+                "Specimen encontrado",
                 HttpStatus.OK,
                 specimenService.getSpecimenById(id)
         );
@@ -71,7 +71,7 @@ public class SpecimenController {
             @PathVariable UUID id,
             @RequestBody @Valid UpdateSpecimenRequest request) {
         return buildResponse(
-                "Specimen data updated successfully",
+                "Specimen se actualizo correctamente",
                 HttpStatus.OK,
                 specimenService.updateSpecimen(id, request)
         );
@@ -80,7 +80,7 @@ public class SpecimenController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<GeneralResponse> deleteSpecimen(@PathVariable UUID id) {
         return buildResponse(
-                "Specimen erased from records",
+                "Specimen ha sido eliminado",
                 HttpStatus.OK,
                 specimenService.deleteSpecimen(id)
         );
